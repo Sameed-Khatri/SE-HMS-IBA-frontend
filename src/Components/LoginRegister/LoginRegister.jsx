@@ -3,6 +3,7 @@ import './LoginRegister.css'
 import logo from '../assets/logo.png'
 import desk from '../assets/desk2.png'
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 
 
@@ -33,27 +34,46 @@ const LoginRegister = () => {
   
   //};
 
-
+  const history = useHistory();
   const submitClick = () => {
-    // Assuming your API endpoint is at 'http://your-api-url/MartinDow/signin'
-    const apiUrl = 'http://your-api-url/MartinDow/signin';
-
-    // Make a POST request to the API
+    const apiUrl = 'http://localhost:3001/user/MartinDow/signin';
+  
     axios.post(apiUrl, {
       userid: inputName,
       password: inputPass,
       role: role,
+    }, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
     })
     .then(response => {
-      // Handle the API response here
-      console.log('API Response:', response.data);
-      // You can add more logic based on the response from the API
+      console.log('API Response:', response);
+      console.log('Status Code:', response.status);
+      console.log('Response Data:', response.data);
+    
+      // Assuming the first element of the outer array contains the user data
+      const userData = response.data[0];
+    
+      console.log('User Data:', userData);
+    
+      // Assuming the role is the fourth element in the inner array
+      const userRole = userData[3];
+    
+      if (userRole.toLowerCase() === 'admin') {
+        console.log('Redirecting to Admin Dashboard');
+        history.push('/admin-dashboard');
+      } else {
+        console.log('User role is not admin. Do something else.');
+      }
     })
     .catch(error => {
-      // Handle errors
+      // Log the error
       console.error('Error calling API:', error);
     });
   };
+  
+  
 
 
   const [inputPass,setInputPass] = useState('');
