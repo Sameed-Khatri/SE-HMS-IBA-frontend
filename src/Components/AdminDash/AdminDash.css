@@ -1,0 +1,50 @@
+.adminDash .contain2{
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.adminDash .contain2 img{
+    width: 100px;
+    height: 100px;
+}
+
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.role{
+    background-color: #dccce6;
+    width:200px;
+    height: 30px;
+}
+
+.role {
+    display: flex;
+    align-items: center;
+}
+
+.role p{
+    margin-left: 15px;
+}
+
+.row1 button ,.row2 button{
+    width:200px;
+    height: 30px;
+    background-color:#9083D5;
+    border-radius: 15px;
+}
+
+.adminDash .contain3 .row1,.adminDash .contain3 .row2{
+    gap:20px;
+    margin: 100px;
+}
+
+
+.adminDash .contain1{
+    display: flex;
+    margin:50px;
+    justify-content: space-between;
+    align-items: center;
+}

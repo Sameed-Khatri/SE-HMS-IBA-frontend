@@ -1,0 +1,77 @@
+.logReg .contain1{
+    display: flex;
+    margin:50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info{
+    display: flex;
+    gap:20px;
+}
+
+.logoName{
+    display:flex;
+    gap:20px;
+}
+
+.contain2{
+    display: flex;
+    justify-content: space-around;
+    gap:50px;
+    /*margin:50px;
+    margin-right: 150px;*/
+    margin-top: 100px;
+    align-items: center;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    margin-bottom: 20px;
+}
+
+input{
+    width:200px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #f0e9f4;
+}
+
+.contain2 img{
+    width: 300px;
+    height: 300px;
+}
+
+.logobtn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rolesbtn button{
+    width:100px;
+    height: 30px;
+
+}
+
+
+
+
+
+.signUpIn,.pass{
+    display: flex;
+    justify-content: space-around;
+    margin:20px;
+    gap:20px;
+}
+
+.signUpIn button,.pass button{
+    width:200px;
+    height: 30px;
+    background-color:#9083D5;
+    border-radius: 15px;;
+}
+

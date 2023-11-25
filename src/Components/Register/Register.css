@@ -1,0 +1,104 @@
+
+
+.registerNew .contain1{
+    display: flex;
+    margin:50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info{
+    display: flex;
+    gap:20px;
+}
+
+.logoName{
+    display:flex;
+    gap:20px;
+}
+
+.contain2{
+    justify-content: space-between;
+    margin: 50px;
+}
+
+.contain2 button, .signUp{
+    width:200px;
+    height: 30px;
+    background-color:#9083D5;
+    border-radius: 15px;
+}
+
+form{
+    margin:50px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+form input, select{
+    background-color: #f0e9f4;
+}
+
+select{
+    width:200px;
+    height: 30px;
+}
+
+
+input, select{
+    margin-left: 10px;
+}
+.row1, .row2 ,.row3,.row4,.row5{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.row4{
+    margin-left: 90px;
+}
+
+.name{
+    margin-left: 60px;
+}
+
+.cnic{
+    margin-left: 90px;
+}
+
+
+.registerNew option, .registerNew select{
+    color:black;
+    background-color:  #f0e9f4;
+}
+
+
+
+.conPass{
+    margin-left: -30px;
+}
+
+.contain4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registerNew .caontain2{
+    margin-top: 0px;
+}
+
+.registerNew .contain4{
+    justify-content: space-around;
+}
+
+.errordetail{
+    color:red;
+}
+
+.ErrorBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,38 @@
+.contain4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contain4 button{
+    width:200px;
+    height: 30px;
+    background-color:#9083D5;
+    border-radius: 15px;;
+}
+
+.changepass .PassChange .row1,.changepass .PassChange .row2{
+    margin:30px;
+}
+
+.changepass .contain1{
+    display: flex;
+    margin:50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ChErrordetail{
+    color:red;
+}
+
+.ChErrorBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.changepass .contain4{
+    justify-content: space-around;
+}
+

@@ -1,0 +1,24 @@
+.approve,.delete{
+    color: black;
+    font-size: large;
+}
+
+.tableData .approve{
+    background-color: green;
+}
+
+.tableData .delete{
+    background-color: red;
+}
+
+
+.tableData button{
+    width:auto;
+}
+
+.pendApp .contain1{
+    display: flex;
+    margin:50px;
+    align-items: center;
+    justify-content: space-between;
+}

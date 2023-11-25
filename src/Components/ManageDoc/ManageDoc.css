@@ -1,0 +1,16 @@
+.tableData button{
+    border-radius: 0px;
+    background-color: red;
+}
+
+.delDoc{
+    color:black;
+    font-size: large;
+}
+
+.managedoctor .contain1{
+    display: flex;
+    margin:50px;
+    justify-content: space-between;
+    align-items: center;
+}
