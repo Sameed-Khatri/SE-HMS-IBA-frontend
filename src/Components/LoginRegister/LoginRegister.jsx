@@ -119,7 +119,7 @@ const LoginRegister = () => {
           <button>Sign Up</button>
         </div>
         <div className='pass'>
-          <button>Forget Password</button>
+          <button >Forget Password</button>
           <button>Change Password</button>
         </div>
       </div>

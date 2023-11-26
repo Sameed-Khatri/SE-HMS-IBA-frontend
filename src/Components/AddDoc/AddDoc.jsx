@@ -1,10 +1,16 @@
 import React,{useState} from 'react'
 import './AddDoc.css'
+import { useHistory } from 'react-router-dom';
 
 const AddDoc = () => {
+  const history = useHistory();
+
   const BackAddDoc = () =>{
+    history.push('/admin-dashboard')
     console.log("back to admin dashboard");
   };
+
+
   
   const [docName, setDocName] = useState('');
   const [docEmail, setDocEmail] = useState('');

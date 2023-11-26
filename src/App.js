@@ -40,6 +40,8 @@ function App() {
         <Route path="/manage-doctors" component={ManageDoc} />
         <Route path="/add-doctor" component={AddDoc} />
         <Route path="/" component={LoginRegister} />
+
+        
       </Switch>
     </Router>
   );

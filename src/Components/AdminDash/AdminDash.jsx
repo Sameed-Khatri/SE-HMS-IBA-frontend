@@ -2,27 +2,35 @@ import React from 'react'
 import logo from '../assets/logo.png'
 import './AdminDash.css'
 import profile from '../assets/profile.png'
+import { useHistory } from 'react-router-dom';
 
 
 const AdminDash = () => {
+    const history = useHistory();
 
     const AdminOut = ()=>{
-        console.log("Admin Log out")
+        console.log("Admin Log out");
+        history.push('/login');
     };
 
     const allApp = ()=>{
-        console.log("show all Appointments")
+        console.log("show all Appointments");
+        history.push('/admin-all');
     };
 
     const managedoc = () =>{
-        console.log("manage doc")
+        console.log("manage doc");
+        history.push('/manage-doctors');
     };
 
     const adddoc = () =>{
         console.log("Add Doctors")
+        history.push('/add-doctor');
     };
      const PendApp = () =>{
-        console.log("show pending Apps")
+        console.log("show pending Apps");
+        history.push('/pending-appointments');
+
      };
   return (
     <div className='adminDash'>

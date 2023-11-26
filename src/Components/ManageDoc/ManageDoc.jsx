@@ -1,9 +1,13 @@
 import React,{useState} from 'react'
 import './ManageDoc.css'
+import {useHistory} from 'react-router-dom'
 
 const ManageDoc = () => {
+  const history = useHistory();
+
   const manageBack = () =>{
     console.log("Back to admin dashboard");
+    history.push('/admin-dashboard');
   };
 
   const docDel = ()=>{

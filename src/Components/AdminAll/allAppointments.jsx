@@ -1,10 +1,13 @@
 import React,{useState} from 'react'
 import './allAppointments.css'
+import {useHistory} from 'react-router-dom'
 
 const AllAppointments = () => {
-  
+  const history = useHistory();
+
   const allAppBack=()=>{
     console.log("Back to Dashboard");
+    history.push('/admin-dashboard');
   };
 
   const [mode, setMode] = useState('');

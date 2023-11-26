@@ -1,10 +1,14 @@
 import React from 'react'
 import './PendingApp.css'
+import {useHistory} from 'react-router-dom'
 
 
 const PendingApp = () => {
+    const history = useHistory();
     const pendingBack = ()=>{
         console.log("back to admin Dashboard");
+        console.log(history);
+        history.push('/admin-dashboard');
     };
 
     const appApp = ()=>{
