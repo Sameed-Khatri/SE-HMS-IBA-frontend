@@ -1,12 +1,16 @@
 import React,{useState} from 'react'
 import logo from '../assets/logo.png'
 import './ChangePass.css'
+import { useHistory } from 'react-router-dom';
+
 
 
 
 const ChangePass = () => {
+  const history = useHistory();
   const changeBack = ()=>{
     console.log("Back to login");
+    history.push('/login');
   };
 
   const SubChangePass=()=>{

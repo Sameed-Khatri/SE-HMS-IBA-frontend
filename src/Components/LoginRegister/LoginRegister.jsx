@@ -14,6 +14,10 @@ const LoginRegister = () => {
     setRole(role);
   };
 
+  const GoToReg = ()=>{
+    history.push('/register');
+  };
+
   const [inputName,setInputName] = useState('');
 
   const handleNameChange = (event) =>{
@@ -85,6 +89,13 @@ const LoginRegister = () => {
   
   const [role,setRole] = useState('');
 
+  const forPass=()=>{
+    history.push('/change-password');
+  };
+
+  const chagnepass = ()=>{
+    history.push('/change-password');
+  };
 
   return (
     <div className='logReg'>
@@ -116,11 +127,11 @@ const LoginRegister = () => {
         </div>
         <div className='signUpIn'>
           <button onClick={submitClick}>Sign In</button>
-          <button>Sign Up</button>
+          <button onClick={GoToReg}>Sign Up</button>
         </div>
         <div className='pass'>
-          <button >Forget Password</button>
-          <button>Change Password</button>
+          <button onCLick={forPass}>Forget Password</button>
+          <button onCLick={chagnepass}>Change Password</button>
         </div>
       </div>
       <div className='logobtn'>

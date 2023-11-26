@@ -1,11 +1,15 @@
 import React, {useState} from 'react'
 import logo from '../assets/logo.png'
 import './Register.css'
+import { useHistory } from 'react-router-dom';
+
 
 
 const Register = () => {
+  const history = useHistory();
   const regBack = ()=>{
     console.log("back to login page")
+    history.push('/login')
   };
 
   const [userName, setUserName] = useState('');
