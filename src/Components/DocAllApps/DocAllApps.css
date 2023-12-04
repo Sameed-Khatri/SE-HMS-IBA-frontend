@@ -1,0 +1,14 @@
+.AllAppsDoc .contain1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.backtoDash{
+    margin-right: 20px;
+}
+
+.AllAppsDoc .contain2{
+    justify-content: center;
+}

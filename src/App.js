@@ -10,6 +10,10 @@ import AdminAll from './Components/AdminAll/allAppointments.jsx';
 import PendingApp from './Components/PendingApp/PendingApp.jsx';
 import ManageDoc from './Components/ManageDoc/ManageDoc.jsx';
 import AddDoc from './Components/AddDoc/AddDoc.jsx';
+import PatientDash from './Components/PatientDash/PatientDash.jsx';
+import BookApp from './Components/BookApp/BookApp.jsx';
+import DocDash from './Components/DocDash/DocDash.jsx';
+import DocAllApps from './Components/DocAllApps/DocAllApps.jsx';
 
 // function App() {
 //   return (
@@ -29,7 +33,7 @@ import AddDoc from './Components/AddDoc/AddDoc.jsx';
 
 function App() {
   return (
-    <Router>
+    /*<Router>
       <Switch>
         <Route path="/login" component={LoginRegister} />
         <Route path="/register" component={Register} />
@@ -43,7 +47,11 @@ function App() {
 
         
       </Switch>
-    </Router>
+    </Router>*/
+    //<PatientDash/>
+    //<DocDash/>
+    //<DocAllApps/>
+    <AdminAll/>
   );
 }
 

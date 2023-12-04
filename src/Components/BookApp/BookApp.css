@@ -1,0 +1,41 @@
+.AppBooking .contain1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px;
+}
+
+.formRow{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin:10px;
+}
+
+.timePopUp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+
+.errordetail{
+    color:red;
+}
+
+.AppBooking .contain3{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ErrorBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.BookingForm{
+    display: flex;
+    flex-grow: 1;
+}

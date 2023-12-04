@@ -1,0 +1,53 @@
+.PatientDashbaord .contain2{
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.PatientDashbaord .contain2 img{
+    width: 100px;
+    height: 100px;
+}
+
+.PatientDashbaord .contain1{
+    display: flex;
+    margin:50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.PatientDashbaord .contain3{
+    display: flex;
+    margin:50px;
+    margin-bottom: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.PatientDashbaord .contain4{
+    align-items: center;
+}
+
+.PatientApp{
+    width: 600px;
+    margin :0px 100px;
+}
+
+.PatientApp td, .PatientApp th{
+    font-size: medium;
+}
+
+.PatientPres{
+    margin: 0px 100px;
+
+}
+
+.PatientPres .tableData button{
+background-color: #9083D5;
+}
+
+.PatientDashbaord .contain5{
+    display: flex;
+    margin: 100px;
+    justify-content: center;
+    align-items: center;
+}

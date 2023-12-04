@@ -1,0 +1,28 @@
+.DashDoc .contain2{
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.DashDoc .contain2 img{
+    width: 100px;
+    height: 100px;
+}
+
+.DashDoc .contain1{
+    display: flex;
+    margin:50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.DashDoc .contain3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:10px;
+}
+
+.AssignPres{
+
+    background-color: #9083D5;
+}
