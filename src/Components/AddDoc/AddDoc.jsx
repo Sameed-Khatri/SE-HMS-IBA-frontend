@@ -186,7 +186,7 @@ const AddDoc = () => {
   const [maritalStatus, setMaritalStatus] = useState('Married');
   const [docCNIC, setDocCNIC] = useState('');
   const [docDOB, setDocDOB] = useState('');
-  const [docDept, setDocDept] = useState('');
+  const [docDept, setDocDept] = useState('Cardiology');
   const [docPass, setDocPass] = useState('');
   const [docPassCon, setDocPassCon] = useState('');
   const [docContact, setDocContact] = useState('');

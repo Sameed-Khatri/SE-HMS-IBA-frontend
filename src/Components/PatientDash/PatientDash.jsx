@@ -9,11 +9,13 @@ const PatientDash = () => {
 
     const bookingPage = () =>{
         console.log("Go to booking page")
+        
     };
 
     const PatientOut = () =>{
         //history.push('/login');
         console.log("patient log out");
+        history.push('/login')
     };
 
     const ViewAllApp = () =>{

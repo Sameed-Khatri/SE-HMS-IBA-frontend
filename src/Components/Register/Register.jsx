@@ -204,7 +204,7 @@ const Register = () => {
     };
   
     // Sending data to the backend
-    fetch('http://localhost:3001/MartinDow/signup', {
+    fetch('http://localhost:3001/user/MartinDow/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -270,7 +270,7 @@ const Register = () => {
               <input type="text" value={cnic} onChange={(e)=> {setCnic(e.target.value)}} />
             </label>
             <label className='birth'>D.O.B:  
-              <input type="text" value={dob} onChange={(e)=> setDob(e.target.value)} placeholder='DD-MM-YYYY'/>
+              <input type="text" value={dob} onChange={(e)=> setDob(e.target.value)} placeholder='YYYY-MM-DD'/>
             </label>            
             <label className='insurance'>Insurance ID:  
               <input type="text" value={insuranceId} onChange={(e)=> setInsuranceId(e.target.value)}/>
