@@ -130,7 +130,7 @@ const ChangePass = () => {
           newPassword: newPassword,
         };
 
-        fetch('http://localhost:3001/MartinDow/forgotpassword', {
+        fetch('http://localhost:3001/user/MartinDow/forgotpassword', {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',

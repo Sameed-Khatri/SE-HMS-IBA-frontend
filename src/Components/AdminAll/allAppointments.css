@@ -41,6 +41,11 @@ th, td{
 
 
 
+.errorPrompt{
+    color:white;
+    font: large;
+}
+
 th{
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;

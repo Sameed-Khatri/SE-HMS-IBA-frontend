@@ -159,13 +159,18 @@ import logo from '../assets/logo.png';
 import desk from '../assets/desk2.png';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setSelectionInfo } from '../../store/slices/selectionSlice';
+import {useNavigate} from 'react-router-dom'
 
 const LoginRegister = () => {
+  const dispatch = useDispatch();
   const [inputName, setInputName] = useState('');
   const [inputPass, setInputPass] = useState('');
   const [role, setRole] = useState('');
   const history = useHistory();
   const [error, setError] = useState('');
+  
 
 
   const handleNameChange = (event) => {
@@ -199,9 +204,19 @@ const LoginRegister = () => {
       if (role.toLowerCase() === 'admin') {
         history.push('/admin-dashboard');
       } else if (role.toLowerCase() === 'patient') {
-        history.push('/patient-dashboard'); 
+
+        const req = {
+          "userid": response.data.inputName
+        }
+    
+        try {
+          dispatch(setSelectionInfo(req));
+        } catch (err){
+        }
+
+        history.push(`/patient-dashboard/${inputName}`); 
       } else if (role.toLowerCase() === 'doctor') {
-        history.push('/doctor-dashboard'); 
+        history.push(`/doctor-dashboard/${inputName}`); 
       } else {
         // Navigate to different pages based on role or show message
         console.log('Role not recognized');

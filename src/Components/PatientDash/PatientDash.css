@@ -51,3 +51,8 @@ background-color: #9083D5;
     justify-content: center;
     align-items: center;
 }
+
+.PatientDashbaord .tableData{
+    max-height: 200px;
+    overflow-y:scroll;
+}

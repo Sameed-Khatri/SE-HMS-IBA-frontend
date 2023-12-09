@@ -43,9 +43,9 @@ function App() {
         <Route path="/pending-appointments" component={PendingApp} />
         <Route path="/manage-doctors" component={ManageDoc} />
         <Route path="/add-doctor" component={AddDoc} />
-        <Route path="/patient-dashboard" component={PatientDash} />
-        <Route path="/book-appointment" component={BookApp} />
-        <Route path="/doctor-dashboard" component={DocDash} />
+        <Route path="/patient-dashboard/:userId" component={PatientDash} />
+        <Route path="/book-appointment/:userId" component={BookApp} />
+        <Route path="/doctor-dashboard/:userId" component={DocDash} />
         <Route path="/doctor-all-appointments" component={DocAllApps} />
         <Route path="/" component={LoginRegister} />
         

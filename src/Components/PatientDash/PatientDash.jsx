@@ -2,13 +2,44 @@ import React from 'react'
 import './PatientDash.css'
 import logo from '../assets/logo.png'
 import profile from '../assets/profile.png'
-import { useHistory } from 'react-router-dom';
+import { useHistory} from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
+import { useState,useEffect } from 'react';
+
+
 
 const PatientDash = () => {
+    const { selectionInfo } = useSelector((state) => state.selection);
     const history = useHistory();
+    console.log({ selectionInfo });
+    const { userId } = useParams();
+
+    const curUserID = {userId}.userId;
+    console.log(curUserID);
+    console.log({userId});
+
+    const [upcomingAppointments, setUpcomingAppointments] = useState([]); // State to store upcoming appointments
+
+    // Function to fetch upcoming appointments
+    const fetchUpcomingAppointments = async () => {
+        try {
+            const response = await axios.get(`http://localhost:3001/patient/fetchUpcomingAppointments/${curUserID}`);
+            setUpcomingAppointments(response.data);
+        } catch (error) {
+            console.error('Error fetching upcoming appointments', error);
+        }
+    };
+
+    useEffect(() => {
+        fetchUpcomingAppointments(); // Fetch upcoming appointments when the component mounts
+    }, []);
+
 
     const bookingPage = () =>{
         console.log("Go to booking page")
+        history.push(`/book-appointment/${curUserID}`)
         
     };
 
@@ -51,7 +82,7 @@ const PatientDash = () => {
                     <img src={profile}/>
                 </div>
                 <div className='role'>
-                    <p className='DisplayName'>Patient Name</p>
+                    <p className='DisplayName'>{userId}</p>
                 </div>
             </div>
             <h1>Patient Dashboard</h1>
@@ -63,22 +94,34 @@ const PatientDash = () => {
         </div>
         <div className='contain4'>
             <table className='PatientApp'>
-            <div className='headings'>
-                    <th>Date</th>
-                    <th>Doctor's Name</th>
-                    <th>Time</th>
-                    <th>Chamber</th>
-                    <th>Status</th>
-                </div>
-                <div className='tableData'>
-                    <tr>
-                        <td>30-10-2023</td>
-                        <td>Travis Head</td>
-                        <td>10:00</td>
-                        <td>online</td>
-                        <td>Scheduled</td>
-                    </tr>
-                </div>
+            <thead className="headings">
+                        <tr>
+                            <th>Appointment ID</th>
+                            <th>Doctor's Name</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Mode</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    {upcomingAppointments && upcomingAppointments.length > 0 ? (
+                    <tbody className="tableData">
+                        {upcomingAppointments.map(appointment => (
+                            <tr key={appointment.appointment_id}>
+                                <td>{appointment.appointment_id}</td>
+                                <td>{appointment.doctor_name}</td>
+                                <td>{appointment.appointment_date}</td>
+                                <td>{appointment.time_slot}</td>
+                                <td>{appointment.appointment_mode}</td>
+                                <td>{appointment.appointment_status}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                    ) : (
+                        <div className="errorPrompt">No Upcoming Appointments</div>
+  
+          )};
+                
             </table>
             <table className='PatientPres'>
                  <div className='headings'>
@@ -89,12 +132,9 @@ const PatientDash = () => {
                 </div>
                 <div className='tableData'>
                     <tr>
-                        <td>123</td>
-                        <td>Travis Head</td>
-                        <td><button onClick={viewPres} className='viewPres'>View</button></td>
-                        <td>30-10-2023</td>
                     </tr>
                 </div>
+                
             </table>
         </div>
         <div className='contain5'>

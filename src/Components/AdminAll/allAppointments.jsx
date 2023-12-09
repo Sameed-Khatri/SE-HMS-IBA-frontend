@@ -262,7 +262,7 @@ const AllAppointments = () => {
         <button onClick={searchAppointments}>Search</button>
       </div>
       <div className='contain2'>
-        {appointments && appointments.length > 0 ? (
+        
           <table>
             <thead>
               <tr>
@@ -282,19 +282,20 @@ const AllAppointments = () => {
                 <th>
                   <select value={status} onChange={e => setStatus(e.target.value)}>
                     <option value="">Status</option>
-                    <option value="Done">Done</option>
-                    <option value="Cancel">Cancel</option>
+                    <option value="Scheduled">Scheduled</option>
+                    <option value="Cancelled">Cancelled</option>
                   </select>
                 </th>
                 <th>
                   <select value={type} onChange={e => setType(e.target.value)}>
                     <option value="">Type</option>
-                    <option value="FollowUp">Follow up</option>
+                    <option value="Follow Up">Follow up</option>
                     <option value="First">First</option>
                   </select>
                 </th>
               </tr>
             </thead>
+            {appointments && appointments.length > 0 ? (
             <tbody>
               {appointments.map(appointment => (
                 <tr key={appointment.appointment_id}>
@@ -303,17 +304,19 @@ const AllAppointments = () => {
                   <td>{appointment.patient_name}</td>
                   <td>{appointment.doctor_id}</td>
                   <td>{appointment.doctor_name}</td>
-                  <td>{appointment.date_time}</td>
+                  <td>{appointment.appointment_date}</td>
                   <td>{appointment.appointment_mode}</td>
                   <td>{appointment.appointment_status}</td>
                   <td>{appointment.appointment_type}</td>
                 </tr>
               ))}
             </tbody>
-          </table>
-        ) : (
-          <div>{statusMessage}</div>
+                    ) : (
+                      <div className="errorPrompt">No such Data</div>
+
         )}
+          </table>
+
       </div>
     </div>
   );
