@@ -239,7 +239,7 @@ const ManageDoc = () => {
                                     <td>{doctor.department_name}</td>
                                     <td>{doctor.day}</td>
                                     <td>{doctor.time_slot}</td>
-                                    <td>{doctor.mode_of_availibility}</td>
+                                    <td>{doctor.mode_of_availability}</td>
                                     <td>
                                         <button className='delDoc' onClick={() => docDel(doctor.doctor_id)}>Delete</button>
                                     </td>
